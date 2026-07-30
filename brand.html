@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RASHMÉ — Brand Guidelines</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --beige: #F5F0E8;
+            --black: #0D0D0D;
+            --red: #9B1C1C;
+            --muted: #6B6560;
+            --border: rgba(13,13,13,0.1);
+            
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--beige);
+            color: var(--black);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            padding: 4rem 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: left;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .brand-monogram img {
+            height: 80px;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        h1.brand-title {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            letter-spacing: -0.02em;
+            color: var(--black);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .brand-tagline {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--muted);
+        }
+
+        .doc-meta {
+            position: absolute;
+            top: 0; right: 0;
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        section { margin-bottom: 5rem; }
+
+        .section-title {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--red);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* COLORS */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .color-card {
+            border: 1px solid var(--border);
+            background: #fff;
+        }
+        .color-swatch { height: 140px; width: 100%; border-bottom: 1px solid var(--border); }
+        .color-info { padding: 1.5rem; background: var(--beige); }
+        .color-name { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.25rem; }
+        .color-hex { font-size: 0.75rem; letter-spacing: 0.1em; color: var(--muted); font-weight: 500; }
+
+        /* TYPOGRAPHY */
+        .type-sample-box { margin-bottom: 3rem; }
+        .type-label { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; border-left: 2px solid var(--red); padding-left: 1rem; }
+        .type-specimen-title { font-family: var(--font-serif); font-size: 4rem; line-height: 1; margin-bottom: 0.5rem; }
+        .type-specimen-body { font-family: var(--font-sans); font-size: 1rem; color: var(--muted); max-width: 600px; }
+
+        /* LOGO */
+        .logo-display-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .logo-box { padding: 4rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .logo-box.light { background: var(--beige); border: 1px solid var(--border); }
+        .logo-box.dark { background: var(--black); color: var(--beige); }
+        .logo-box img { height: 60px; margin-bottom: 1.5rem; }
+        .logo-box.dark img { filter: invert(1); }
+        .logo-caption { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2rem; color: var(--muted); }
+        .logo-box.dark .logo-caption { color: rgba(245,240,232,0.5); }
+
+        /* PACKAGING */
+        .packaging-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .packaging-card { border: 1px solid var(--border); background: #fff; padding: 2rem; display: flex; flex-direction: column; }
+        .packaging-card img { width: 100%; height: auto; max-height: 350px; object-fit: contain; margin-bottom: 1.5rem; }
+        .packaging-info h4 { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .packaging-info p { font-size: 0.85rem; color: var(--muted); }
+
+        /* RULES */
+        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .rule-card h4 { font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .rule-card ul { list-style: none; }
+        .rule-card li { position: relative; padding-left: 1.5rem; margin-bottom: 1rem; font-size: 0.95rem; color: var(--muted); }
+        .rule-card li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 1px; background: var(--red); }
+        
+        footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-align: center; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="doc-meta">Official Brand Kit v2.0</div>
+        <div class="brand-monogram">
+            <img src="rashme_nobg.svg" alt="RASHMÉ Logo">
+        </div>
+        <h1 class="brand-title">RASHMÉ</h1>
+        <div class="brand-tagline">Editorial Minimalist Design System</div>
+    </header>
+
+    <section>
+        <div class="section-title">
+            <span>01 / Core Palette</span>
+            <span>Colors</span>
+        </div>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #F5F0E8;"></div>
+                <div class="color-info">
+                    <div class="color-name">Creamy Beige</div>
+                    <div class="color-hex">#F5F0E8</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #0D0D0D;"></div>
+                <div class="color-info">
+                    <div class="color-name">Deep Black</div>
+                    <div class="color-hex">#0D0D0D</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #9B1C1C;"></div>
+                <div class="color-info">
+                    <div class="color-name">Bloody Red</div>
+                    <div class="color-hex">#9B1C1C</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <span>02 / Typography</span>
+            <span>Fonts</span>
+        </div>
+        <div class="type-sample-box">
+            <div class="type-label">Display — Playfair Display</div>
+            <div class="type-specimen-title">Transformative Care</div>
+            <div class="type-specimen-body">Used for massive editorial headlines and section titles. Italics are encouraged for emphasis (e.g. <em>bottled</em>).</div>
+        </div>
+        <div class="type-sample-box">
+            <div class="type-label">Body — Inter</div>
+            <div class="type-specimen-body">Formulated with 25 cold-pressed botanicals engineered to restore scalp vitality, deeply nourish hair fibers, and support natural pigment preservation from root to tip. Used for all paragraphs and UI elements.</div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <span>03 / Logo Lockups</span>
+            <span>Marks</span>
+        </div>
+        <div class="logo-display-grid">
+            <div class="logo-box light">
+                <img src="rashme_nobg.svg" alt="RASHMÉ Logo">
+                <div class="logo-caption">Primary (On Beige)</div>
+            </div>
+            <div class="logo-box dark">
+                <img src="rashme_nobg.svg" alt="RASHMÉ Logo">
+                <div class="logo-caption">Inverted (On Black)</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <span>04 / Product Packaging</span>
+            <span>Assets</span>
+        </div>
+        <div class="packaging-grid">
+            <div class="packaging-card">
+                <img src="oil1.png" alt="Outer Box Packaging">
+                <div class="packaging-info">
+                    <h4>Outer Carton</h4>
+                    <p>Espresso black rigid board with Champagne Gold foil stamping. Used for retail display.</p>
+                </div>
+            </div>
+            <div class="packaging-card">
+                <img src="oilbottle.png" alt="Inner Glass Bottle">
+                <div class="packaging-info">
+                    <h4>Inner Glass Bottle</h4>
+                    <p>Premium dark amber glass with minimal typography and a gold-accented collar dropper.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <span>05 / Visual Guidelines</span>
+            <span>Rules</span>
+        </div>
+        <div class="rules-grid">
+            <div class="rule-card">
+                <h4>UI & Layout</h4>
+                <ul>
+                    <li>Massive whitespace and generous padding is mandatory.</li>
+                    <li>No rounded buttons (border-radius: 0) to maintain an editorial, high-fashion aesthetic.</li>
+                    <li>Thin, sharp 1px borders using rgba(13,13,13,0.1).</li>
+                </ul>
+            </div>
+            <div class="rule-card">
+                <h4>Color Usage</h4>
+                <ul>
+                    <li>Beige is the primary background. Never use stark white (#FFFFFF).</li>
+                    <li>Black is used for all primary text and heavy contrast blocks (like the footer).</li>
+                    <li>Red is an accent. Use strictly for underlines, active states, or key CTA buttons.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>RASHMÉ Luxury Hair Care &copy; 2026</footer>
+
+</body>
+</html>
