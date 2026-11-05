@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RASHMÉ — Brand Guidelines</title>
+    <link rel="icon" type="image/x-icon" href="rashme_nobg.ico">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --beige: #F5F0E8;
-            --black: #0D0D0D;
-            --red: #9B1C1C;
-            --muted: #6B6560;
-            --border: rgba(13,13,13,0.1);
+            --beige: #F4EEE3;
+            --beige-dark: #EAE1D2;
+            --black: #0B0A08;
+            --red: #8C1C1C;
+            --gold: #A9865B;
+            --muted: #6C6458;
+            --border: rgba(11,10,8,0.12);
             
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Fraunces', serif;
+            --font-sans: 'Manrope', sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -91,8 +94,8 @@
         /* COLORS */
         .color-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
         }
         .color-card {
             border: 1px solid var(--border);
@@ -134,6 +137,14 @@
         .rule-card li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 1px; background: var(--red); }
         
         footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-align: center; }
+
+        @media (max-width: 760px) {
+            body { padding: 2.5rem 1.25rem; }
+            .color-grid { grid-template-columns: 1fr 1fr; }
+            .logo-display-grid, .packaging-grid, .rules-grid { grid-template-columns: 1fr; }
+            h1.brand-title { font-size: 2.8rem; }
+            .type-specimen-title { font-size: 2.8rem; }
+        }
     </style>
     <!-- Facebook Pixel Code -->
     <script>
@@ -156,7 +167,7 @@
             <img src="rashme_nobg.svg" alt="RASHMÉ Logo">
         </div>
         <h1 class="brand-title">RASHMÉ</h1>
-        <div class="brand-tagline">Editorial Minimalist Design System</div>
+        <div class="brand-tagline">Bold Editorial Design System</div>
     </header>
 
     <section>
@@ -166,24 +177,31 @@
         </div>
         <div class="color-grid">
             <div class="color-card">
-                <div class="color-swatch" style="background-color: #F5F0E8;"></div>
+                <div class="color-swatch" style="background-color: #F4EEE3;"></div>
                 <div class="color-info">
-                    <div class="color-name">Creamy Beige</div>
-                    <div class="color-hex">#F5F0E8</div>
+                    <div class="color-name">Bone</div>
+                    <div class="color-hex">#F4EEE3</div>
                 </div>
             </div>
             <div class="color-card">
-                <div class="color-swatch" style="background-color: #0D0D0D;"></div>
+                <div class="color-swatch" style="background-color: #0B0A08;"></div>
                 <div class="color-info">
-                    <div class="color-name">Deep Black</div>
-                    <div class="color-hex">#0D0D0D</div>
+                    <div class="color-name">Ink</div>
+                    <div class="color-hex">#0B0A08</div>
                 </div>
             </div>
             <div class="color-card">
-                <div class="color-swatch" style="background-color: #9B1C1C;"></div>
+                <div class="color-swatch" style="background-color: #8C1C1C;"></div>
                 <div class="color-info">
-                    <div class="color-name">Bloody Red</div>
-                    <div class="color-hex">#9B1C1C</div>
+                    <div class="color-name">Oxblood</div>
+                    <div class="color-hex">#8C1C1C</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background-color: #A9865B;"></div>
+                <div class="color-info">
+                    <div class="color-name">Brass</div>
+                    <div class="color-hex">#A9865B</div>
                 </div>
             </div>
         </div>
@@ -195,12 +213,12 @@
             <span>Fonts</span>
         </div>
         <div class="type-sample-box">
-            <div class="type-label">Display — Playfair Display</div>
+            <div class="type-label">Display — Fraunces</div>
             <div class="type-specimen-title">Transformative Care</div>
-            <div class="type-specimen-body">Used for massive editorial headlines and section titles. Italics are encouraged for emphasis (e.g. <em>bottled</em>).</div>
+            <div class="type-specimen-body">Used for massive editorial headlines and section titles. Optical sizing and italics are encouraged for emphasis (e.g. <em>bottled</em>).</div>
         </div>
         <div class="type-sample-box">
-            <div class="type-label">Body — Inter</div>
+            <div class="type-label">Body — Manrope</div>
             <div class="type-specimen-body">Formulated with 25 cold-pressed botanicals engineered to restore scalp vitality, deeply nourish hair fibers, and support natural pigment preservation from root to tip. Used for all paragraphs and UI elements.</div>
         </div>
     </section>
@@ -229,14 +247,14 @@
         </div>
         <div class="packaging-grid">
             <div class="packaging-card">
-                <img src="oil1.png" alt="Outer Box Packaging">
+                <img src="oil1.webp" alt="Outer Box Packaging">
                 <div class="packaging-info">
                     <h4>Outer Carton</h4>
                     <p>Espresso black rigid board with Champagne Gold foil stamping. Used for retail display.</p>
                 </div>
             </div>
             <div class="packaging-card">
-                <img src="oilbottle.png" alt="Inner Glass Bottle">
+                <img src="oilbottle.webp" alt="Inner Glass Bottle">
                 <div class="packaging-info">
                     <h4>Inner Glass Bottle</h4>
                     <p>Premium dark amber glass with minimal typography and a gold-accented collar dropper.</p>
@@ -256,15 +274,17 @@
                 <ul>
                     <li>Massive whitespace and generous padding is mandatory.</li>
                     <li>No rounded buttons (border-radius: 0) to maintain an editorial, high-fashion aesthetic.</li>
-                    <li>Thin, sharp 1px borders using rgba(13,13,13,0.1).</li>
+                    <li>Thin, sharp 1px borders using rgba(11,10,8,0.12).</li>
+                    <li>Oversized type, asymmetric grids and full-bleed imagery drive the layout.</li>
                 </ul>
             </div>
             <div class="rule-card">
                 <h4>Color Usage</h4>
                 <ul>
-                    <li>Beige is the primary background. Never use stark white (#FFFFFF).</li>
-                    <li>Black is used for all primary text and heavy contrast blocks (like the footer).</li>
-                    <li>Red is an accent. Use strictly for underlines, active states, or key CTA buttons.</li>
+                    <li>Bone is the primary background. Never use stark white (#FFFFFF).</li>
+                    <li>Ink is used for all primary text and heavy contrast blocks (like the footer).</li>
+                    <li>Oxblood is the accent. Use strictly for italics, underlines, active states, or key CTA buttons.</li>
+                    <li>Brass appears sparingly in imagery, foils and packaging details.</li>
                 </ul>
             </div>
         </div>
