@@ -21,7 +21,7 @@
   pointer-events: none;
 }
 .story-hero {
-  min-height: clamp(600px, 84vh, 900px);
+  min-height: 100svh;
   align-items: center;
   padding-bottom: clamp(4.5rem, 7vw, 6.5rem);
   background-color: var(--black);
@@ -1137,7 +1137,7 @@
   .contact-quick-links__inner { align-items: flex-start; flex-direction: column; gap: 1rem; }
   .contact-quick-links__inner > div { flex-wrap: wrap; }
   .story-hero {
-    min-height: 82svh;
+    min-height: 100svh;
     align-items: flex-end;
     padding-bottom: 4rem;
     background-size: cover;
