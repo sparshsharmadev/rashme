@@ -58,16 +58,33 @@
   </div>
 
   <!-- HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="page-hero__kicker">The Collection</span>
-      <h1 class="display-lg">The <em>Elixir</em></h1>
-      <p class="page-hero__sub">One product. Crafted to perfection. Designed to transform.</p>
+  <section class="page-hero products-hero">
+    <div class="products-hero__result" role="group" aria-label="Hair before and after comparisons">
+      <figure class="products-hero__result-card products-hero__result-card--portrait">
+        <img src="hair-results.png" alt="Hair before and after comparison, shown from behind" fetchpriority="high">
+        <figcaption class="products-hero__result-label products-hero__result-label--before">Before</figcaption>
+        <span class="products-hero__result-label products-hero__result-label--after">After</span>
+      </figure>
+      <figure class="products-hero__result-card products-hero__result-card--split">
+        <img src="hair-results-split.png" alt="Split comparison of textured hair before and smooth hair after" fetchpriority="high">
+      </figure>
+    </div>
+    <div class="container products-hero__container">
+      <div class="products-hero__copy">
+        <span class="page-hero__kicker">The Collection</span>
+        <h1 class="display-lg">The <em>Elixir</em></h1>
+        <p class="page-hero__sub">One product. Crafted to perfection. Designed to transform.</p>
+        <a class="btn btn-red products-hero__cta" href="#product-detail">Explore the Elixir <span aria-hidden="true">↓</span></a>
+        <div class="products-hero__facts" aria-label="Product details">
+          <div><strong>13</strong><span>cold-pressed botanicals</span></div>
+          <div><strong>100 ml</strong><span>daily hair ritual</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PRODUCT DETAIL -->
-  <section class="product-feature">
+  <section class="product-feature" id="product-detail">
     <div class="container">
       <div class="product-feature__grid">
         
@@ -109,7 +126,7 @@
             </div>
             <div class="product-meta-item">
               <dt>Price</dt>
-              <dd class="red">₹ TBD</dd>
+              <dd class="red">₹ 599</dd>
             </div>
           </div>
 
@@ -202,8 +219,8 @@
   </section>
 
   <!-- EDITORIAL BANNER -->
-  <section class="editorial-banner reveal">
-    <div class="editorial-banner__bg" style="background-image: url('model2-editorial.webp');"></div>
+  <section class="editorial-banner product-editorial-banner reveal">
+    <div class="editorial-banner__bg" style="background-image: url('promo2-editorial.png');"></div>
     <div class="editorial-banner__content">
       <h2>Pure botanicals. <br><em>No compromises.</em></h2>
       <p>Your hair deserves the finest cold-pressed oils. Every bottle of RASHMÉ is a testament to purity, heritage, and undeniable results.</p>

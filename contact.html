@@ -21,7 +21,7 @@
     fbq('track', 'PageView');
   </script>
 </head>
-<body>
+<body class="contact-page">
   <noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=1630472941875618&amp;ev=PageView&amp;noscript=1" alt=""/></noscript>
   <div id="curtain"></div>
 
@@ -58,11 +58,20 @@
   </div>
 
   <!-- HERO -->
-  <section class="page-hero">
-    <div class="container text-center">
-      <span class="page-hero__kicker" style="margin: 0 auto 1.5rem;">We're Here</span>
-      <h1 class="display-lg">Get in <em>Touch</em></h1>
-      <p class="page-hero__sub" style="margin: 0 auto;">Whether you want to order, ask a question, or just talk hair — we're always happy to connect.</p>
+  <section class="page-hero contact-hero">
+    <div class="container contact-hero__container">
+      <div class="contact-hero__copy">
+        <span class="page-hero__kicker">A note to RASHMÉ</span>
+        <h1 class="display-lg">Let's talk<br><em>hair.</em></h1>
+        <p class="page-hero__sub">Product questions, order help, or a little guidance for your routine — we're happy to help.</p>
+        <a class="btn btn-red contact-hero__button" href="#contactForm">Start a conversation <span aria-hidden="true">↗</span></a>
+      </div>
+      <aside class="contact-hero__aside" aria-label="Contact promise">
+        <span class="contact-hero__aside-mark" aria-hidden="true">R</span>
+        <span class="contact-hero__aside-label">Good care, good conversation</span>
+        <p>Thoughtful answers for your hair care journey.</p>
+        <span class="contact-hero__aside-index">01 — 03</span>
+      </aside>
     </div>
   </section>
 
@@ -70,29 +79,29 @@
   <section class="contact-section">
     <div class="container">
       <div class="contact-grid">
-        
         <div class="contact-form-wrap reveal-left">
-          <h2>Send us a Message</h2>
-          <p class="sub">We'll get back to you within 24 hours. Promise.</p>
-          
+          <span class="contact-section__eyebrow">Start a conversation</span>
+          <h2>How can we <em>help?</em></h2>
+          <p class="sub">Share a few details and our team will get back to you within 24 hours.</p>
+
           <form id="contactForm" onsubmit="handleFormSubmit(event)">
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName" placeholder="Arjun" required>
+                <input type="text" id="firstName" name="firstName" placeholder="Arjun" autocomplete="given-name" required>
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" placeholder="Kumar" required>
+                <input type="text" id="lastName" name="lastName" placeholder="Kumar" autocomplete="family-name" required>
               </div>
             </div>
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" placeholder="arjun@example.com" required>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
             </div>
             <div class="form-group">
               <label for="subject">Subject</label>
-              <select id="subject">
+              <select id="subject" name="subject" required>
                 <option value="" disabled selected>Select a topic</option>
                 <option value="order">Place an Order</option>
                 <option value="enquiry">Product Enquiry</option>
@@ -103,31 +112,54 @@
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" placeholder="Tell us how we can help you..." required></textarea>
+              <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-red" style="width: 100%; justify-content: center;">Send Message</button>
+            <button type="submit" class="btn btn-red contact-submit">Send Message <span aria-hidden="true">↗</span></button>
           </form>
-          
+
           <div id="formSuccess" class="form-success">
             <p>✓ Message sent! We'll be in touch within 24 hours.</p>
           </div>
         </div>
 
         <div class="contact-info reveal-right">
-          <h3>Reach Us Directly</h3>
-            
-            <div class="contact-info-card">
-              <div class="contact-card-icon">📸</div>
-              <div>
-                <span class="contact-card-label">Instagram</span>
-                <span class="contact-card-value">@officialrashmee</span>
-                <a href="https://www.instagram.com/officialrashmee" class="contact-card-link" target="_blank">Follow</a>
-                <span class="contact-card-sub">Follow for updates &amp; tips</span>
-              </div>
-            </div>
+          <div class="contact-info__intro">
+            <span class="contact-section__eyebrow">Need a quick answer?</span>
+            <h3>We can point you there.</h3>
+            <p>Find product details, ingredient notes, and simple ways to make the Elixir part of your ritual.</p>
+          </div>
+          <div class="contact-info-cards">
+            <a href="https://www.instagram.com/officialrashmee" class="contact-link-card" target="_blank" rel="noopener noreferrer">
+              <span class="contact-link-card__num">01</span>
+              <span><strong>Follow along</strong><small>Instagram · @officialrashmee</small></span>
+              <span class="contact-link-card__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="products.html#faq" class="contact-link-card">
+              <span class="contact-link-card__num">02</span>
+              <span><strong>Product questions</strong><small>Browse our frequently asked questions</small></span>
+              <span class="contact-link-card__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="rituals.html" class="contact-link-card">
+              <span class="contact-link-card__num">03</span>
+              <span><strong>Build your ritual</strong><small>Learn how to use the Black Elixir</small></span>
+              <span class="contact-link-card__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="contact-response-note">
+            <span class="contact-response-note__line"></span>
+            <p>We usually reply within <strong>24 hours</strong>.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="contact-quick-links" aria-label="Explore RASHMÉ">
+    <div class="container contact-quick-links__inner">
+      <p>While you're here, explore the care behind every drop.</p>
+      <div>
+        <a href="ingredients.html">The ingredients <span aria-hidden="true">↗</span></a>
+        <a href="story.html">Our story <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>

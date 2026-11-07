@@ -442,6 +442,9 @@ em {
   transform: scale(1.02);
   will-change: transform;
 }
+.product-editorial-banner .editorial-banner__bg {
+  background-position: center center;
+}
 .editorial-banner__content {
   position: relative;
   z-index: 2;
