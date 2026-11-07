@@ -36,14 +36,15 @@
 
 /* ── Reset ── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 1rem); font-size: 16px; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+html { width: 100%; overflow-x: clip; scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 1rem); font-size: 16px; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 body {
+  width: 100%;
   font-family: var(--font-sans);
   font-weight: 400;
   background: var(--beige);
   color: var(--black);
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 img { max-width:100%; height:auto; display:block; }
 /* Let grid and flex children shrink to the phone viewport. */
