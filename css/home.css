@@ -672,4 +672,10 @@
   .hero__actions .btn { padding: 0.9rem 1.6rem; }
   .stats__grid { grid-template-columns: 1fr 1fr; }
   .stats__item { padding: 0.5rem 0.75rem; }
+  .hero__actions { align-items: stretch; }
+  .hero__actions .btn { flex: 1 1 100%; }
+  .featured__actions .btn { flex: 1 1 100%; }
+  .ingr-card, .ritual-step { padding: 1.75rem 1.25rem; }
+  .testi-card { padding: 1.75rem 1.25rem; }
+  .stats__label { font-size: 0.58rem; letter-spacing: 0.16em; }
 }

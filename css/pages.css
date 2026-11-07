@@ -1149,6 +1149,10 @@
   .products-hero { min-height: 100svh; align-items: flex-end; padding-top: calc(var(--nav-h) + 1.5rem); padding-bottom: 2rem; }
   .products-hero__container { flex-direction: column; align-items: flex-start; justify-content: flex-end; }
   .products-hero__copy { max-width: 100%; }
+  .products-hero__facts { flex-wrap: wrap; gap: 0.75rem 1.25rem; margin-top: 1.5rem; }
+  .products-hero__facts div { gap: 0.4rem; }
+  .products-hero__facts span { font-size: 0.52rem; }
+  .products-hero__cta { flex-wrap: wrap; gap: 0.75rem; }
   .products-hero__result {
     top: 7%;
     right: -2%;
@@ -1180,6 +1184,21 @@
   .product-meta { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 480px) {
+  .page-hero { min-height: 420px; padding-top: calc(var(--nav-h) + 2.5rem); }
+  .page-hero h1 { font-size: clamp(2.8rem, 13vw, 4rem); overflow-wrap: anywhere; }
+  .page-hero__kicker { font-size: 0.56rem; letter-spacing: 0.25em; gap: 0.65rem; }
+  .page-hero__kicker::before { width: 25px; }
+  .page-hero__sub { font-size: 0.94rem; }
+  .story-hero { padding-bottom: 3rem; }
+  .story-hero__container { padding-inline: var(--gutter); }
+  .products-hero { padding-bottom: 1.5rem; }
+  .products-hero__result { width: 100%; right: -4%; height: 39%; top: 8%; }
+  .products-hero__facts { gap: 0.6rem 1rem; }
+  .story-block { gap: 2rem; padding-block: 3.5rem; }
+  .story-block__heading { font-size: clamp(2rem, 10vw, 3rem); }
+  .contact-form-wrap, .contact-info { padding: 1.25rem; }
+  .product-actions { flex-direction: column; }
+  .product-actions .btn { width: 100%; }
   .ritual-full-step { grid-template-columns: 1fr; }
   .ritual-full-step__num { font-size: 3rem; }
   .ritual-full-step__tip { grid-column: 1; }
