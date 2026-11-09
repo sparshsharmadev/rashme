@@ -179,4 +179,14 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+  // Ensure active mobile subnav link is scrolled into view smoothly
+  const activeSubnavLink = document.querySelector('.navbar__links .navbar__link.active');
+  if (activeSubnavLink) {
+    const container = activeSubnavLink.closest('.navbar__links');
+    if (container && container.scrollWidth > container.clientWidth) {
+      const centerPos = activeSubnavLink.offsetLeft - (container.clientWidth / 2) + (activeSubnavLink.clientWidth / 2);
+      container.scrollTo({ left: Math.max(0, centerPos), behavior: 'smooth' });
+    }
+  }
 });

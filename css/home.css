@@ -627,12 +627,18 @@
   .testi-card:last-child { grid-column: 1 / -1; }
 }
 @media (max-width: 900px) {
-  .hero { justify-content: flex-end; text-align: left; padding-bottom: 3.5rem; }
-  .hero__bg { top: 0; width: 100%; }
+  .hero { justify-content: flex-end; text-align: left; padding-bottom: 3.5rem; min-height: 100svh; }
+  .hero__bg { top: 0; bottom: 0; left: 0; right: 0; width: 100%; }
+  .hero__bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 64% calc(var(--nav-h) + 12px);
+  }
   .hero__bg::after {
     background:
-      linear-gradient(180deg, rgba(11,10,8,0.75) 0%, rgba(11,10,8,0.2) 20%, rgba(11,10,8,0.5) 60%, rgba(11,10,8,0.95) 100%),
-      linear-gradient(90deg, rgba(11,10,8,0.7) 0%, rgba(11,10,8,0.3) 100%);
+      linear-gradient(180deg, rgba(11,10,8,0.92) 0%, rgba(11,10,8,0.3) calc(var(--nav-h) + 10px), rgba(11,10,8,0.08) calc(var(--nav-h) + 70px), rgba(11,10,8,0.6) 70%, rgba(11,10,8,0.98) 100%),
+      linear-gradient(90deg, rgba(11,10,8,0.7) 0%, rgba(11,10,8,0.2) 100%);
   }
   .hero__content { max-width: 100%; margin: 0; text-align: left; transform: none; }
   .hero__eyebrow { justify-content: flex-start; margin-left: 0; margin-right: 0; }
@@ -654,9 +660,12 @@
 }
 @media (max-width: 480px) {
   .hero {
-    padding: calc(var(--nav-h) + 1.5rem) 1.15rem 2.5rem;
-    min-height: 85svh;
+    padding: calc(var(--nav-h) + 1.25rem) 1.15rem 2.5rem;
+    min-height: 92svh;
     justify-content: flex-end;
+  }
+  .hero__bg-img {
+    object-position: 65% calc(var(--nav-h) + 8px);
   }
   .hero__content { padding: 0; }
   .hero__eyebrow { font-size: 0.58rem; margin-bottom: 1rem; letter-spacing: 0.3em; gap: 0.75rem; }

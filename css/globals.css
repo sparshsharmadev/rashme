@@ -58,7 +58,7 @@ input, textarea, select { font-family:inherit; font-size:inherit; color:inherit;
 :focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
 
 @media (max-width: 600px) {
-  :root { --gutter: 1.15rem; --nav-h: 70px; }
+  :root { --gutter: 1.15rem; --nav-h: 88px; }
   html { scroll-padding-top: calc(var(--nav-h) + 0.75rem); }
   .section { padding-block: 3.5rem; }
   .section-sm { padding-block: 2.25rem; }
