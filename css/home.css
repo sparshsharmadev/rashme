@@ -627,12 +627,12 @@
   .testi-card:last-child { grid-column: 1 / -1; }
 }
 @media (max-width: 900px) {
-  .hero { justify-content: flex-end; text-align: left; padding-bottom: 4rem; }
-  .hero__bg { width: 100%; }
+  .hero { justify-content: flex-end; text-align: left; padding-bottom: 3.5rem; }
+  .hero__bg { top: 0; width: 100%; }
   .hero__bg::after {
     background:
-      linear-gradient(90deg, rgba(11,10,8,0.66) 0%, rgba(11,10,8,0.42) 48%, rgba(11,10,8,0.2) 100%),
-      linear-gradient(0deg, rgba(11,10,8,0.9) 0%, rgba(11,10,8,0.48) 55%, rgba(11,10,8,0.14) 100%);
+      linear-gradient(180deg, rgba(11,10,8,0.75) 0%, rgba(11,10,8,0.2) 20%, rgba(11,10,8,0.5) 60%, rgba(11,10,8,0.95) 100%),
+      linear-gradient(90deg, rgba(11,10,8,0.7) 0%, rgba(11,10,8,0.3) 100%);
   }
   .hero__content { max-width: 100%; margin: 0; text-align: left; transform: none; }
   .hero__eyebrow { justify-content: flex-start; margin-left: 0; margin-right: 0; }
@@ -643,7 +643,7 @@
 }
 @media (max-width: 768px) {
   .featured__grid { grid-template-columns: 1fr; gap: 3rem; }
-  .featured__img::before { inset: 1rem -1rem -1rem 1rem; }
+  .featured__img::before { inset: 0.75rem 0 -0.75rem 0.75rem; }
   .ingr-grid, .ritual-steps, .testi-grid { grid-template-columns: 1fr; }
   .ingr-card, .ritual-step { border-right: none; border-bottom: 1px solid var(--border); }
   .ritual-step { border-bottom-color: rgba(244,238,227,0.1); }
@@ -654,27 +654,27 @@
 }
 @media (max-width: 480px) {
   .hero {
-    padding: calc(var(--nav-h) + 2rem) 1.15rem 3rem;
-    min-height: 88svh;
+    padding: calc(var(--nav-h) + 1.5rem) 1.15rem 2.5rem;
+    min-height: 85svh;
     justify-content: flex-end;
   }
   .hero__content { padding: 0; }
-  .hero__eyebrow { font-size: 0.58rem; margin-bottom: 1.25rem; letter-spacing: 0.3em; gap: 0.75rem; }
+  .hero__eyebrow { font-size: 0.58rem; margin-bottom: 1rem; letter-spacing: 0.3em; gap: 0.75rem; }
   .hero__eyebrow::before { width: 28px; }
   .hero__title {
-    font-size: clamp(3.2rem, 17vw, 5.5rem);
+    font-size: clamp(2.8rem, 15vw, 4.5rem);
     letter-spacing: -0.04em;
-    line-height: 0.88;
-    margin-bottom: 1rem;
+    line-height: 0.9;
+    margin-bottom: 0.85rem;
+    overflow-wrap: break-word;
   }
-  .hero__sub { font-size: clamp(1rem, 4vw, 1.15rem); margin-bottom: 1.5rem; }
-  .hero__actions { gap: 0.6rem; }
-  .hero__actions .btn { padding: 0.9rem 1.6rem; }
+  .hero__sub { font-size: clamp(0.95rem, 3.8vw, 1.15rem); margin-bottom: 1.5rem; }
+  .hero__actions { gap: 0.6rem; align-items: stretch; flex-direction: column; }
+  .hero__actions .btn { width: 100%; padding: 0.9rem 1.4rem; }
   .stats__grid { grid-template-columns: 1fr 1fr; }
   .stats__item { padding: 0.5rem 0.75rem; }
-  .hero__actions { align-items: stretch; }
-  .hero__actions .btn { flex: 1 1 100%; }
-  .featured__actions .btn { flex: 1 1 100%; }
+  .featured__actions { flex-direction: column; gap: 0.75rem; }
+  .featured__actions .btn { width: 100%; }
   .ingr-card, .ritual-step { padding: 1.75rem 1.25rem; }
   .testi-card { padding: 1.75rem 1.25rem; }
   .stats__label { font-size: 0.58rem; letter-spacing: 0.16em; }

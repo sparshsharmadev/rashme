@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     progress.style.transform = `scaleX(${scrollable > 0 ? Math.min(y / scrollable, 1) : 0})`;
 
-    if (!reduceMotion) {
+    if (!reduceMotion && window.innerWidth > 768) {
       const vh = window.innerHeight;
       parallaxEls.forEach(el => {
         const parent = el.parentElement;
@@ -81,6 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
     menuOpen = open;
     if (!hamburger || !mobileMenu) return;
     hamburger.classList.toggle('open', menuOpen);
+    hamburger.setAttribute('aria-expanded', String(menuOpen));
+    hamburger.setAttribute('aria-label', menuOpen ? 'Close navigation menu' : 'Open navigation menu');
     mobileMenu.classList.toggle('open', menuOpen);
     document.body.classList.toggle('menu-open', menuOpen);
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -101,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. Scroll Reveal Animations (Intersection Observer)
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const isMobile = window.innerWidth <= 768;
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -111,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, {
     root: null,
-    rootMargin: '0px 0px -60px 0px',
-    threshold: 0.08
+    rootMargin: isMobile ? '0px 0px 80px 0px' : '0px 0px -60px 0px',
+    threshold: isMobile ? 0.01 : 0.08
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
